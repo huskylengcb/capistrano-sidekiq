@@ -277,6 +277,10 @@ namespace :sidekiq do
   end
 
   def sidekiq_user(role)
+    p self
+    Rails.info self
+    Rails.info role
+    p role
     properties = role.properties
     properties.fetch(:sidekiq_user) || # local property for sidekiq only
       fetch(:sidekiq_user) ||
