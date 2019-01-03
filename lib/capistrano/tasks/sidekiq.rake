@@ -281,6 +281,8 @@ namespace :sidekiq do
     p self
     p 'ROLE'
     p role
+    p 'METHOD'
+    p role.methods
     properties = role.properties
     properties.fetch(:sidekiq_user) || # local property for sidekiq only
       fetch(:sidekiq_user) ||
